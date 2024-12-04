@@ -1,0 +1,302 @@
+/* General Styles */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #333, #000);
+    color: #fff;
+    padding: 20px 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+header nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+header nav ul li {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+header nav ul li a {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ffcc00;
+}
+
+header .search-cart {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header .search-cart input {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background: #fff;
+    color: #333;
+    font-size: 14px;
+    width: 200px;
+    transition: all 0.3s ease;
+}
+
+header .search-cart input:focus {
+    width: 250px;
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
+}
+
+header .icons {
+    display: flex;
+    gap: 20px;
+}
+
+header .icons .icon {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+header .icons .icon svg {
+    fill: #000;
+    transition: fill 0.3s ease;
+}
+
+header .icons .icon:hover {
+    background-color: #ffcc00;
+}
+
+header .icons .icon:hover svg {
+    fill: #000;
+}
+
+header .icons .icon:active {
+    transform: scale(0.95);
+}
+
+/* Main Section Styles */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background: linear-gradient(to bottom, #f0f0f0, #ffffff);
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+}
+
+.categories {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Для адаптации на маленьких экранах */
+}
+
+.category {
+    position: relative;
+    overflow: hidden;
+    width: 600px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.category img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.category .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.category:hover .overlay {
+    background: rgba(0, 0, 0, 0.8);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(90deg, #000, #333);
+    color: #fff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+    margin-top: auto;
+}
+
+footer .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+footer .social {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+footer .social a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .social a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+footer .social a:active {
+    transform: scale(1);
+}
+
+footer .contact {
+    font-size: 14px;
+    text-align: right;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+
+/* Для планшетов (ширина экрана до 1024px) */
+@media (max-width: 1024px) {
+    header {
+        padding: 15px 30px;
+    }
+
+    header .logo {
+        font-size: 24px;
+    }
+
+    .category {
+        width: 450px; /* Уменьшаем размер карточек */
+    }
+
+    footer {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+}
+
+/* Для телефонов (ширина экрана до 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header .logo {
+        font-size: 20px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .category {
+        width: 300px; /* Ещё меньше для телефонов */
+    }
+
+    .categories {
+        gap: 20px;
+    }
+
+    footer {
+        padding: 15px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Для очень маленьких экранов (ширина экрана до 480px) */
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    .category {
+        width: 100%; /* Полная ширина экрана */
+    }
+
+    footer .contact {
+        font-size: 12px;
+    }
+}

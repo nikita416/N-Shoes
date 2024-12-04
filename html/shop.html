@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог</title>
+    <link rel="stylesheet" href="E:\Курсовая\4 курс\Конструювання ПЗ\Web-Site\assets\css\shop.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="main.html">N-Shoes</a></div>
+        <nav>
+            <ul>
+                <li><a href="shop.html">Каталог</a></li>
+                <li><a href="registration.html">Реєстрація</a></li>
+                <li><a href="support.html">Підтримка</a></li>
+            </ul>
+        </nav>
+        <div class="search-cart">
+            <input type="text" id="search" placeholder="шукати...">
+            <div class="icons">
+                <span class="icon user"><a href="account.html">👤</a></span>
+                <span class="icon cart"><a href="cart.html">🛒</a></span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="catalog-container">
+            <!-- Фильтры -->
+            <aside class="filters">
+    <h3>Стать</h3>
+    <ul>
+        <li><input type="checkbox" class="gender-filter" value="Чоловіча"> Чоловіча</li>
+        <li><input type="checkbox" class="gender-filter" value="Жіноча"> Жіноча</li>
+    </ul>
+
+    <h3>Категорії</h3>
+    <ul>
+        <li><input type="checkbox" class="category-filter" value="Туфлі"> Туфлі</li>
+        <li><input type="checkbox" class="category-filter" value="Мокасини"> Мокасини</li>
+        <li><input type="checkbox" class="category-filter" value="Кросівки"> Кросівки</li>
+        <li><input type="checkbox" class="category-filter" value="Кеди"> Кеди</li>
+        <li><input type="checkbox" class="category-filter" value="Сандалі"> Сандалі</li>
+    </ul>
+
+    <h3>Фільтри</h3>
+    <div>
+        <label>Ціна</label>
+        <div class="price-filter">
+            <input type="range" id="priceRange" min="0" max="5000" value="5000">
+            <span id="priceValue">5000 грн</span>
+        </div>
+    </div>
+
+    <h3>Бренд</h3>
+    <ul>
+        <li><input type="checkbox" class="brand-filter" value="Nike"> Nike</li>
+        <li><input type="checkbox" class="brand-filter" value="Adidas"> Adidas</li>
+        <li><input type="checkbox" class="brand-filter" value="Guess"> Guess</li>
+        <li><input type="checkbox" class="brand-filter" value="Salomon"> Salomon</li>
+    </ul>
+</aside>
+
+            <!-- Товары -->
+            <section class="products" id="products"></section>
+        </section>
+    </main>
+    <footer>
+        <div class="logo">N-Shoes</div>
+        <div class="social">
+            <a href="https://www.instagram.com" target="_blank">Instagram</a>
+            <a href="https://t.me" target="_blank">Telegram</a>
+            <a href="https://viber.com" target="_blank">Viber</a>
+        </div>
+        <div class="contact">
+            <p>Contact us:</p>
+            <p>Phone: +380 (67) 701 5017</p>
+            <p>Email: support@nshoes.com</p>
+        </div>
+    </footer>
+    <script src="E:\Курсовая\4 курс\Конструювання ПЗ\Web-Site\assets\js\shop.js"></script>
+</body>
+</html>

@@ -1,0 +1,372 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #333, #000);
+    color: #fff;
+    padding: 20px 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+header nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+header nav ul li {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+header nav ul li a {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ffcc00;
+}
+
+header .search-cart {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header .search-cart input {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background: #fff;
+    color: #333;
+    font-size: 14px;
+    width: 200px;
+    transition: all 0.3s ease;
+}
+
+header .search-cart input:focus {
+    width: 250px;
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
+}
+
+header .icons {
+    display: flex;
+    gap: 20px;
+}
+
+header .icons .icon {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+header .icons .icon svg {
+    fill: #000;
+    transition: fill 0.3s ease;
+}
+
+header .icons .icon:hover {
+    background-color: #ffcc00;
+}
+
+header .icons .icon:hover svg {
+    fill: #000;
+}
+
+header .icons .icon:active {
+    transform: scale(0.95);
+}
+
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Контент сверху */
+    align-items: center;
+    padding: 40px 20px;
+    background: linear-gradient(to bottom, #ffffff, #f9f9f9); /* Нежный градиент */
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+}
+
+.catalog-container {
+    display: flex;
+    flex-wrap: wrap; /* Адаптивная компоновка */
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px; /* Ограничение ширины для больших экранов */
+}
+
+/* Фильтры */
+.filters {
+    flex: 1;
+    max-width: 220px;
+    border-right: 2px solid #ddd; /* Больше акцента на разделении */
+    padding: 20px;
+    background-color: #fefefe; /* Легкий фон для фильтров */
+    border-radius: 10px; /* Скругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
+    transition: transform 0.3s ease;
+}
+
+.filters:hover {
+    transform: scale(1.02); /* Легкое увеличение при наведении */
+}
+
+.filters h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+    border-bottom: 2px solid #ddd; /* Подчеркивание для заголовков */
+    padding-bottom: 5px;
+}
+
+.filters ul {
+    padding: 0;
+    margin: 0;
+}
+
+.filters ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filters ul li input {
+    accent-color: #ffcc00; /* Стилизация чекбоксов */
+}
+
+/* Секция товаров */
+.products {
+    flex: 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* Карточки товаров */
+.product {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 15px; /* Более мягкие углы */
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: scale(1.05); /* Эффект увеличения при наведении */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Более глубокая тень */
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product:hover img {
+    transform: scale(1.1); /* Легкий зум изображения */
+}
+
+.product .price {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 0;
+    background-color: #f9f9f9;
+    margin: 0;
+    color: #333;
+    border-top: 1px solid #ddd;
+}
+
+.product p {
+    padding: 10px;
+    font-size: 16px;
+    color: #555;
+    margin: 0;
+}
+
+/* Добавить эффект фокусировки на фильтрах */
+.filters input:focus,
+.filters input:hover {
+    outline: none;
+    border: 1px solid #ffcc00;
+    background: #fffbe6;
+    transition: all 0.3s ease;
+}
+
+/* Кнопки в фильтрах */
+.filters button {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.filters button:hover {
+    background-color: #ffaa00;
+    transform: scale(1.05);
+}
+
+.filters button:active {
+    transform: scale(0.95);
+}
+
+footer {
+    background: linear-gradient(90deg, #000, #333);
+    color: #fff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+    margin-top: auto;
+}
+
+footer .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+footer .social {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+footer .social a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .social a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+footer .social a:active {
+    transform: scale(1);
+}
+
+footer .contact {
+    font-size: 14px;
+    text-align: right;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+    header {
+        padding: 15px 30px;
+    }
+
+    header .logo {
+        font-size: 24px;
+    }
+
+    .category {
+        width: 450px;
+    }
+
+    footer {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header .logo {
+        font-size: 20px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .category {
+        width: 300px;
+    }
+
+    .categories {
+        gap: 20px;
+    }
+
+    footer {
+        padding: 15px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    .category {
+        width: 100%;
+    }
+
+    footer .contact {
+        font-size: 12px;
+    }
+}
