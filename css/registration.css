@@ -117,17 +117,92 @@ header .icons .icon:active {
 main {
     flex: 1;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(to bottom, #f9f9f9, #fff);
     padding: 40px;
-    background: linear-gradient(to bottom, #f0f0f0, #ffffff);
-    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
+}
+
+/* Форма регистрации */
+.form-container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
     width: 100%;
     text-align: center;
+}
+
+.form-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.registration-form label {
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.registration-form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.btn-submit {
+    background: #f0f0f0;
+    color: #000;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background: #ffcc00;
+}
+
+.login-button {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.login-button p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.btn-login {
+    display: inline-block;
+    margin-top: 10px;
+    background: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn-login:hover {
+    background: #ffcc00;
+    color: #fff;
 }
 
 footer {
@@ -200,29 +275,21 @@ footer .contact {
 @media (max-width: 768px) {
     header {
         flex-direction: column;
+        align-items: center;
         gap: 10px;
     }
 
-    header .logo {
-        font-size: 20px;
-    }
-
-    header nav ul {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .category {
-        width: 300px;
-    }
-
-    .categories {
-        gap: 20px;
+    .help-block {
+        padding: 15px;
     }
 
     footer {
-        padding: 15px 20px;
-        font-size: 14px;
+        text-align: center;
+    }
+
+    .contact-methods {
+        flex-direction: column;
+        gap: 10px;
     }
 }
 
