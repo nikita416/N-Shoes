@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Реєстрація</title>
-    <link rel="stylesheet" href="https://nikita416.github.io/N-Shoes/css\registration.css">
+    <link rel="stylesheet" href="E:\Курсовая\4 курс\Конструювання ПЗ\Web-Site\assets\css\registration.css">
 </head>
 <body>
     <header>
-        <div class="logo"><a href="main.html">N-Shoes</a></div>
+        <div class="logo"><a href="E:\Курсовая\4 курс\Конструювання ПЗ\Web-Site\assets\html\main.html">N-Shoes</a></div>
         <nav>
             <ul>
                 <li><a href="shop.html">Каталог</a></li>
@@ -25,7 +25,28 @@
         </div>
     </header>
     <main>
+        <div class="form-container">
+            <h1>Реєстрація</h1>
+            <form action="submit_registration.php" method="post" class="registration-form">
+                <label for="fullname">Повне ім'я:</label>
+                <input type="text" id="fullname" name="fullname" required>
 
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="confirm-password">Підтвердіть пароль:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+
+                <button type="submit" class="btn-submit">Зареєструватися</button>
+                <div class="login-button">
+                <p>Уже зареєстровані?</p>
+                <a href="login.html" class="btn-login">Увійти</a>
+            </div>
+            </form>
+        </div>
     </main>
     <footer>
     <div class="logo">N-Shoes</div>

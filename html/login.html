@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Кошик</title>
-    <link rel="stylesheet" href="E:\Курсовая\4 курс\Конструювання ПЗ\Web-Site\assets\css\cart.css">
+    <title>Увійти</title>
+    <link rel="stylesheet" href="E:\Курсовая\4 курс\Конструювання ПЗ\Web-Site\assets\css\login.css">
 </head>
 <body>
     <header>
@@ -24,16 +24,21 @@
             </div>
         </div>
     </header>
-     <main>
-        <div class="cart-container">
-            <h1>Кошик</h1>
-            <div id="cart-items">
-                <p>Ваш кошик порожній...</p>
-            </div>
-            <div class="cart-summary">
-                <h2>Підсумок</h2>
-                <p id="total-price">Загальна сума: 0 грн</p>
-                <button id="checkout-button">Оформити замовлення</button>
+    <main>
+        <div class="form-container">
+            <h1>Увійти</h1>
+            <form action="submit_login.php" method="post" class="login-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" class="btn-submit">Увійти</button>
+            </form>
+            <div class="register-option">
+                <p>Ще не зареєстровані?</p>
+                <a href="registration.html" class="btn-register">Реєстрація</a>
             </div>
         </div>
     </main>
@@ -50,6 +55,5 @@
         <p>Email: support@nshoes.com</p>
     </div>
 </footer>
-<script src="E:\Курсовая\4 курс\Конструювання ПЗ\Web-Site\assets\js\cart.js"></script>
 </body>
 </html>
