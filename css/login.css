@@ -1,0 +1,308 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #333, #000);
+    color: #fff;
+    padding: 20px 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+header nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+header nav ul li {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+header nav ul li a {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ffcc00;
+}
+
+header .search-cart {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header .search-cart input {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background: #fff;
+    color: #333;
+    font-size: 14px;
+    width: 200px;
+    transition: all 0.3s ease;
+}
+
+header .search-cart input:focus {
+    width: 250px;
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
+}
+
+header .icons {
+    display: flex;
+    gap: 20px;
+}
+
+header .icons .icon {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+header .icons .icon svg {
+    fill: #000;
+    transition: fill 0.3s ease;
+}
+
+header .icons .icon:hover {
+    background-color: #ffcc00;
+}
+
+header .icons .icon:hover svg {
+    fill: #000;
+}
+
+header .icons .icon:active {
+    transform: scale(0.95);
+}
+
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #f9f9f9, #fff);
+    padding: 40px;
+}
+
+/* Форма входа */
+.form-container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.form-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-form label {
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.login-form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.btn-submit {
+    background: #f0f0f0;
+    color: #000;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background: #ffcc00;
+}
+
+/* Секция перехода на регистрацию */
+.register-option {
+    margin-top: 20px;
+}
+
+.register-option p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.btn-register {
+    display: inline-block;
+    margin-top: 10px;
+    background: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn-register:hover {
+    background: #ffcc00;
+    color: #fff;
+}
+
+footer {
+    background: linear-gradient(90deg, #000, #333);
+    color: #fff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+    margin-top: auto;
+}
+
+footer .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+footer .social {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+footer .social a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .social a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+footer .social a:active {
+    transform: scale(1);
+}
+
+footer .contact {
+    font-size: 14px;
+    text-align: right;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+    header {
+        padding: 15px 30px;
+    }
+
+    header .logo {
+        font-size: 24px;
+    }
+
+    .category {
+        width: 450px;
+    }
+
+    footer {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .help-block {
+        padding: 15px;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    .contact-methods {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    .category {
+        width: 100%;
+    }
+
+    footer .contact {
+        font-size: 12px;
+    }
+}
